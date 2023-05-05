@@ -8,6 +8,14 @@ window.addEventListener('scroll', function() {
     }
   });
 
+window.addEventListener('scroll', function() {
+    const portfolioSection = document.getElementById('portfolio');
+    const navbar = document.querySelector('.navbar');
+    if (window.pageYOffset >= portfolioSection.offsetTop - navbar.offsetHeight) {
+      navbar.classList.remove('darkbg');
+    }
+  });
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -59,7 +67,7 @@ portfolioOverlay.forEach(item => {
     });
 });
 
-const words = ["Aspiring Software Developer", "Fervent Learner", "Writer", "Philosopher", "Basketball Player", "Gamer", "Avid Ready", "Movie Enthusiast", ];
+const words = ["Aspiring Software Developer", "Fervent Learner", "Writer", "Philosopher", "Basketball Player", "Gamer", "Avid Reader", "Movie Enthusiast", "Coffee Lover" ];
 let currentWordIndex = 0;
 
 function typewriter() {
@@ -101,6 +109,27 @@ function typewriter() {
 
 
 typewriter();
+
+const form = document.querySelector('#contact-form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const name = form.elements['name'].value;
+  const email = form.elements['email'].value;
+  const message = form.elements['message'].value;
+
+  if (!name || !email || !message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.classList.add('error');
+    errorDiv.textContent = 'Please fill in all fields.';
+    form.appendChild(errorDiv);
+  } else {
+    // Send the form data to the server
+    // Here you can use a library like Axios to make a POST request
+    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+  }
+});
+
 
 
   

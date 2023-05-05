@@ -185,7 +185,7 @@ header::before {
     padding: 0px 80px 0px 80px;
     gap: 30px;
     color: white;
-    background-color: #152238;
+    background-color: #152228;
 }
 
 .descriptions h2 {
@@ -299,6 +299,68 @@ header::before {
   background-color: #000;
   color: #fff;
 }
+
+#contact {
+    background-color: #152228;
+    padding: 80px 0;
+    height: 100vh;
+    color: white;
+  }
+  
+  #contact h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  #contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  #contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  #submit-btn {
+    background-color: #382B15;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #submit-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
 
 @media screen and (max-width: 768px) {
   .portfolio-container {
