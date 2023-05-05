@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+ } 
+
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 999;
+    height: 80px;
+}
+
+.navbar-container {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+} 
+
+.navbar-logo {
+    height: 100px;
+} 
+
+.navbar-logo img {
+    height: 100px;
+    width: 100px;
+} 
+
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-style: "Lato";
+} 
+.navbar-menu li {
+    margin-right: 20px;
+} 
+
+.navbar-menu li:last-child {
+    margin-right: 0;
+} 
+
+.navbar-menu li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+} 
+
+.navbar-menu li a:hover {
+    text-decoration: underline;
+} 
+
+.fab.fa-github {
+    font-size: 24px;
+} 
+
+.header {
+    background: url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+} 
+
+.header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Change the opacity value as needed */
+    z-index: 0; /* Position the overlay behind the text */
+  }
+
+.header-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.slogan {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    font-family: "Georgia", sans-serif;
+} 
+
+.btn-works {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 1.5rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    position: relative;
+    top: 100px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.btn-works::after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.btn-works:hover::after {
+    transform: translate(0, 0);
+}
+ 
+.btn-works:hover {
+    border: 2px solid transparent;
+    color: blue;
+    transform: scale(1.05);
+    will-change: transform;
+} 
+
+header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Change the opacity value as needed */
+}
+
+.about {
+    height: 100vh;
+    width: auto;
+}
+.about-content {
+    display: flex;
+}
+.about img {
+    width: 50vw;
+    height: 100vh;
+}
+
+.descriptions {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 80px 0px 80px;
+    gap: 30px;
+    color: white;
+    background-color: #152238;
+}
+
+.descriptions h2 {
+    font-size: 1.5em;
+    color: orange;
+}
+
+.descriptions h3 {
+    font-size: 2.5em;
+}
+
+.descriptions p {
+    color: #fffefa99;
+}
+
+.darkbg {
+    background-color: #152228;
+}
+
+.hero-container {
+    height: 50px;
+    width: auto;
+}
+
+#portfolio {
+  background-color: #152228;
+  height: 100vh;
+  padding: 0 0 80px 0;
+}
+
+#portfolio h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 46px;
+  font-family: Helvetica;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #382B15;
+  color: white;
+  padding: 80px;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  height: 60vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px 20px 40px;
+  line-height: 1.25;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.portfolio-overlay p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
